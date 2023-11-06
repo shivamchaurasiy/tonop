@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shore+Lines:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap">
+    <title>shivam 2</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .icons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .icons a img {
+        width: 40px;
+    }
+
+    /* banner section */
+    .banner {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* section styles */
+    .section {
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+
+
+
+    /* product section */
+    .container {
+        background-color: #E6F6Fc;
+        padding: 20px;
+    }
+
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .product-card {
+        width: calc(45% - 40px);
+        margin: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        background-color: white;
+        display: flex;
+        box-sizing: border-box;
+    }
+
+    .product-card img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .product-details {
+        padding: 20px;
+        width: 50%;
+    }
+
+    .product-details h2 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+        color: #9ACD32;
+        margin-top: 0;
+    }
+
+    .buy-button {
+        width: 70%;
+        background-color: #26a9e0;
+        color: white;
+        border: none;
+        padding: 10px 0;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .crossed-price {
+        text-decoration: line-through;
+        color: #999;
+        margin-top: -18px;
+    }
+
+    .now_prize {
+        font-size: 20px;
+        font-weight: bold;
+        color: #26a9e0;
+    }
+
+    .offer {
+        color: red;
+        font-weight: bold;
+    }
+
+    /* section 2 */
+    .additional-content {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 40px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .text-content {
+        flex: 1;
+        margin-top: 0;
+    }
+
+    .text-content h1 {
+        margin-top: 50px;
+    }
+
+    .image-content img {
+        width: 60%;
+        max-width: 500px;
+        height: auto;
+        margin-right: 0;
+    }
+
+    /* footer section */
+    .footer {
+        background-color: #E6E7E8;
+        color: black;
+        padding: 20px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .f-logo {
+        margin: 10px;
+        text-align: center;
+    }
+
+
+    /* *********************************** */
+
+    /* media query */
+
+    /* header */
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 120px;
+        }
+
+        .icons a img {
+            width: 30px;
+        }
+    }
+
+    /* banner section */
+    @media (max-width: 768px) {
+        .banner img {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 568px) {
+        .banner img {
+            width: 100%;
+        }
+    }
+
+    /* banner section */
+    @media (max-width: 768px) {
+        .banner img {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 568px) {
+        .banner img {
+            width: 100%;
+        }
+    }
+
+    /* Responsive styles for tablets */
+    @media (max-width: 992px) {
+        .product-card {
+            width: calc(50% - 40px);
+        }
+    }
+
+    /* Responsive styles for mobile devices */
+    @media (max-width: 768px) {
+        .product-card {
+            width: calc(100% - 40px);
+        }
+
+        .product-details h2 {
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+        .product-details p {
+            font-size: 14px;
+            margin-top: -15px;
+        }
+
+        .buy-button {
+            width: 80%;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    }
+
+    /* Responsive styles for smaller mobile devices */
+    @media (max-width: 480px) {
+        .product-details h2 {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .product-details p {
+            font-size: 12px;
+            margin-top: -12px;
+        }
+
+        .buy-button {
+            font-size: 12px;
+            margin-top: 8px;
+        }
+    }
+
+     /* section 2 */
+     @media (max-width: 768px) {
+        .additional-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text-content h1 {
+            margin-top: 30px;
+        }
+
+        .image-content img {
+            width: 40%;
+            max-width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    /* footer section */
+    @media (max-width: 768px) {
+        .footer-logo {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img src="images/emailer01.1-09.jpg" alt="Logo" id="logo">
+        </div>
+        <div class="icons">
+            <a href=""><img src="images/emailer01.1_Facebook.png" alt="Icon 1"></a>
+            <a href=""><img src="images/emailer01.1_Youtube.png" alt="Icon 2"></a>
+            <a href=""><img src="images/emailer01.1_Insta.png" alt="Icon 3"></a>
+            <a href=""><img src="images/emailer01.1_Whatsapp.png" alt="Icon 4"></a>
+            <a href=""><img src="images/emailer01.1_Linkdin.png" alt="Icon 5"></a>
+        </div>
+    </div>
+
+    <!-- banner -->
+    <div class="banner">
+        <img src="images/emailer01.1-02.jpg" alt="Responsive Image">
+    </div>
+    <!-- banner end -->
+
+
+    <!-- section 1 -->
+    <div class="section">
+        <img src="images/emailer01.1-27.jpg" alt="Image">
+    </div>
+    <!-- section 1 end -->
+
+
+    <!-- product section -->
+    <div class="container">
+        <div class="product-container">
+            <div class="product-card" style="margin-top: 40px;">
+                <img src="images/emailer01.1-23.png" alt="Product 1" style="margin-top: -40px;">
+                <div class="product-details">
+                    <h2 style="color: #9ACD32;">Skin 360</h2>
+                    <p style="color: #999;margin-top: -18px;margin-left: 15px;">Was <span
+                            class="crossed-price">₹1499</span></p>
+                    <p class="now_prize" style="font-weight: bold;color: #26a9e0;font-family: 'Poppins', sans-serif;">
+                        Now ₹1274</p>
+                    <p style="color: red;margin-top: -15px;margin-left: 20px;"><span class="offer">(15% off)</span></p>
+                    <button class="buy-button">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="product-card" style="margin-top: 40px;">
+                <img src="images/emailer01.1-24.png" alt="Product 2" style="margin-top: -26px;margin-left: -8px;">
+                <div class="product-details">
+                    <h2 style="color: #9ACD32;">Vitamin 360</h2>
+                    <p style="color: #999;margin-top: -18px;margin-left: 15px;">Was <span
+                            class="crossed-price">₹999</span></p>
+                    <p class="now_prize" style="font-weight: bold;color: #26a9e0;font-family: 'Poppins', sans-serif;">
+                        Now ₹849</p>
+                    <p style="color: red;margin-top: -15px;margin-left: 20px;"><span class="offer">(15% off)</span></p>
+                    <button class="buy-button">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="product-card" style="margin-top: 20px;">
+                <img src="images/emailer01.1-25.png" alt="Product 1" style="margin-top: -20px;margin-left: -20px;">
+                <div class="product-details">
+                    <h2 style="color: #9ACD32;">Bone 360</h2>
+                    <p style="color: #999;margin-top: -18px;margin-left: 15px;">Was <span
+                            class="crossed-price">₹899</span></p>
+                    <p class="now_prize" style="font-weight: bold;color: #26a9e0;font-family: 'Poppins', sans-serif;">
+                        Now ₹764</p>
+                    <p style="color: red;margin-top: -15px;margin-left: 20px;"><span class="offer">(15% off)</span></p>
+                    <button class="buy-button">BUY NOW</button>
+                </div>
+            </div>
+
+            <div class="product-card" style="margin-top: 20px;">
+                <img src="images/emailer01.1-26.png" alt="Product 2" style="margin-top: -23px;margin-left: -30px;">
+                <div class="product-details">
+                    <h2 style="color: #9ACD32;">Digest 360</h2>
+                    <p style="color: #999;margin-top: -18px;margin-left: 15px;">Was <span
+                            class="crossed-price">₹1499</span></p>
+                    <p class="now_prize" style="font-weight: bold;color: #26a9e0;font-family: 'Poppins', sans-serif;">
+                        Now ₹1274</p>
+                    <p style="color: red;margin-top: -15px;margin-left: 20px;"><span class="offer">(15% off)</span></p>
+                    <button class="buy-button">BUY NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of product section -->
+
+
+     <!-- section 2 -->
+     <div class="additional-content">
+        <div class="text-content">
+            <div>
+                <h1 style="font-weight: bold;">Don't Wait!</h1>
+                <p style="margin-top: -20px;">
+                    <span style="font-family: 'Shore Lines', cursive;font-weight: 700;">grab your</span>
+                    <span style="color: #26a9e0;font-size: 35px;font-weight: bold;"> 360 Care</span>
+                </p>
+                <p style="font-size: 22px;margin-top: -15px;">
+                    Before <span style="font-weight: bold;font-size: 22px;">It's too late.</span>
+                </p>
+            </div>
+            <div>
+                <p style="font-weight: bold;font-size: 25px;margin-top: 50px;">
+                    <span style="font-size: 25px;font-weight: bold;font-family: 'Audiowide', sans-serif;">TONEOP,</span>
+                    Your <span style="color: #26a9e0;">CARE</span> is Here.
+                </p>
+                <p style="margin-top: -20px;">
+                    <a href="" style="color: #26a9e0;text-decoration: none;font-size: 24px;">www.toneop.care</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="image-content">
+            <img src="images/emailer01.1-21.png" alt="Additional Image">
+        </div>
+    </div>
+    <!-- end of section -->
+
+
+    <!--Footer section -->
+    <div class="footer">
+        <div class="footer-logo">
+            <div class="f-logo">
+                <img src="images/emailer01.1_High- Quality.png" alt="Logo 1" width="80" height="80">
+                <div style="margin-top: 5px; font-weight: bold;">High-Quality<br>Health Supplements</div>
+            </div>
+            <div class="f-logo">
+                <img src="images/emailer01.1_Free Shipping.png" alt="Logo 2" width="80" height="80">
+                <div style="margin-top: 5px; font-weight: bold;">Free<br>Shipping</div>
+            </div>
+            <div class="f-logo">
+                <img src="images/emailer01.1_Easy & Secure.png" alt="Logo 3" width="80" height="80">
+                <div style="margin-top: 5px; font-weight: bold;">Easy & Secure<br>Payments</div>
+            </div>
+            <div class="f-logo">
+                <img src="images/emailer01.1-13.png" alt="Logo 4" width="80" height="80">
+                <div style="margin-top: 5px; font-weight: bold;">Purest<br>of All</div>
+            </div>
+        </div>
+        <p>Disclaimer: ToneOp Care products are FSSAI-approved and are formulated to support overall well-being. They
+            are not meant to diagnose, treat, cure, or prevent illness. Individual results may vary based on personal
+            factors. Always consult a healthcare professional before incorporating supplements into your routine,
+            especially if you have underlying medical conditions or are pregnant/nursing. Please read product labels and
+            instructions carefully.</p>
+    </div>
+
+    <!-- End of footer section-->
+
+
+</body>
+
+</html>
